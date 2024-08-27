@@ -1,0 +1,23 @@
+calls = 0
+def count_calls():
+    global calls
+    calls += 1
+
+def string_info(word = str()):
+    count_calls()
+    info = (len(word), word.upper(), word.lower())
+    return(info)
+
+def is_contains(word = str(), list = []):
+    count_calls()
+    for i in range(len(list)):
+        if word.lower() == str(list[i]).lower():
+            return(True)
+        elif i == len(list)-1:
+            return(False)
+
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
+print(is_contains('cycle', ['recycling', 'cyclic']))
+print(calls)
