@@ -4,9 +4,7 @@ def single_root_words(root_word = str(), *other_words):
         i = word.lower()
         x = root_word.lower()
         print(f'{i} --- {x}')
-        if i.count(x):
-            same_words.append(word)
-        elif x.count(i):
+        if i.count(x) or x.count(i):
             same_words.append(word)
 
     return(same_words)
