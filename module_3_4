@@ -1,33 +1,13 @@
 def single_root_words(root_word = str(), *other_words):
     same_words = []
-    root_word.lower()
     for word in other_words:
         i = word.lower()
-        print(f'{i} --- {root_word}')
-        x = 0
-        y = 0
-        for j in range(len(i)):
-            for k in range(len(root_word)):
-                if j < len(i) and k < len(root_word) and i[j] == root_word[k]:
-                    x += 1
-                    j += 1
-
-
-
-                else:
-                    x = 0
-                if x == 4:
-                    same_words.append(word)
-                    print(x)
-                    y = 1
-                    x = 0
-                    break
-                print(x)
-
-            if y == 1:
-                y = 0
-                x = 0
-                break
+        x = root_word.lower()
+        print(f'{i} --- {x}')
+        if i.count(x):
+            same_words.append(word)
+        elif x.count(i):
+            same_words.append(word)
 
     return(same_words)
 
