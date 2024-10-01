@@ -1,0 +1,29 @@
+def calculate_structure_sum(data):
+    x = 0
+    for i in data:
+
+        if isinstance(i, int):
+            x += i
+
+        elif isinstance(i, str):
+            x += len(i)
+
+        elif isinstance(i, list) or isinstance(i, set) or isinstance(i, tuple):
+            x += calculate_structure_sum(i)
+
+        elif isinstance(i, dict):
+            x += calculate_structure_sum(i) + calculate_structure_sum(list(i.values()))
+
+    return x
+
+
+data_structure = [
+[1, 2, 3],
+{'a': 4, 'b': 5},
+(6, {'cube': 7, 'drum': 8}),
+"Hello",
+((), [{(2, 'Urban', ('Urban2', 35))}])
+]
+
+result = calculate_structure_sum(data_structure)
+print(result)
