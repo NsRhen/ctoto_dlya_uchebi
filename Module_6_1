@@ -23,6 +23,7 @@ class Plant:
 
 class Mammal(Animal):
     pass
+
 class Predator(Animal):
     pass
 
