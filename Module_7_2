@@ -1,0 +1,27 @@
+def custom_write(file_name: str, strings):
+    positions_list = []
+    file = f'{file_name}'
+    count1 = 1
+
+    for i in strings:
+        open_file = open(file, 'a', encoding='utf-8')
+        count2 = open_file.tell()
+        txt = open_file.write(f'{i}\n')
+        open_file.close()
+        positions_list.append((count1, count2))
+        count1 += 1
+
+    strings_positions = dict(zip(positions_list, strings))
+    return strings_positions
+
+
+info = [
+    'Text for tell.',
+    'Используйте кодировку utf-8.',
+    'Because there are 2 languages!',
+    'Спасибо!'
+    ]
+
+result = custom_write('test.txt', info)
+for elem in result.items():
+    print(elem)
