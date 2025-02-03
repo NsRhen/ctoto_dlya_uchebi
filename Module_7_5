@@ -1,0 +1,12 @@
+import os
+import time
+
+for i in os.walk('.'):
+    print(i)
+
+print(os.path.join('pythonProject', 'Module7', 'Module_7_5.py'))
+
+file_time = os.path.getmtime('test.txt')
+print(time.ctime(file_time))
+print(os.path.getsize('test.txt'))
+print(os.path.dirname('pythonProject\Module7\Module_7_5.py'))
