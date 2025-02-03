@@ -1,0 +1,27 @@
+team1_num = 5
+team2_num = 6
+
+print('В команде Мастера кода участников %s!' % team1_num)
+print('Итого сегодня в команде участников: %s и %s' % (team1_num, team2_num))
+
+score_2 = 42
+
+print('Команда {0} данных решила задач: {1}'.format('Волшебники', team2_num))
+
+team1_time = 18015.2
+
+print('время за которое команда 2 решила задачи: {0} c!'.format(team1_time))
+
+score_1 = 40
+score_2 = 42
+
+print(f'Количество решённых задач по командам:\n1 >> {score_1}\n2 >> {score_2}')
+
+challenge_result = 'победа команды Мастера кода'
+
+print(f'Результат битвы: {challenge_result}!')
+
+tasks_total = 82
+time_avg = 350.4
+
+print(f'Сегодня было решено {tasks_total} задач, в среднем по {time_avg} секунды на задачу!.')
